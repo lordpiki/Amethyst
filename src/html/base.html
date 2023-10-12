@@ -15,44 +15,69 @@
 
 
 <body>
-
-  <header>
-    
-  </header>
   
-  <tab-group new-tab-button="true" sortable="true"> 
-    
-    <style>
-
-      :host{
-        --tabgroup-background: rgba(54, 54, 54, 1);
-        --tab-border-color: transparent;
-        color: rgb(200, 200, 200, 1);
-
-
-      }
-    
-      .amethyst-tab {
-        color: gray;
-        color: rgb(200, 200, 200, 1);
-        background-color: rgba(54 ,54 ,54, 1);
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px;
-        
-      }
-
-      .amethyst-tab.active {
-        color: rgb(200, 200, 200, 1);
-        background-color: rgba(30, 30, 30, 1);
-      }
+  <header>
+    <tab-group new-tab-button="true" sortable="true"> 
       
-    </style>
+      <style rel="stylesheet" href="../assets/css/tabs.css">
+  
+        :host{
+          --tabgroup-background: rgba(54, 54, 54, 1);
+          --tab-border-color: transparent;
+          color: rgb(200, 200, 200, 1);
+  
+  
+        }
+      
+        .amethyst-tab {
+          margin-left:5px;
+          margin-right: 5px;
+          margin-top: 5px;
+  
+          height: 27px;
+          margin-right: 5px;
+          color: rgb(200, 200, 200, 1);
+          width: 25vw;
+          max-width: 200px;
+          background-color: rgba(54 ,54 ,54, 0.5);
+  
+          border-top-right-radius: 7px;
+          border-top-left-radius: 7px;
+          border-bottom-left-radius: 7px;
+          border-bottom-right-radius: 7px;
+          
+          padding: 0 0 0 0;
+          text-align: center;
+          align-items: center;
+          
+        }
+  
+        .amethyst-tab:hover {
+          --tab-hover-background: rgba(69,69,69,255);
+        }
+  
+        .amethyst-tab.active {
+          height: 27px;
+          color: rgb(255, 200, 200, 1);
+          border-left: none;
+          border-right: none;
+          background-color: rgba(30, 30, 30, 1);
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+  
+        }
+  
+        .views {
+          height: 0px
+        }
+        
+      </style>
+    </tab-group>
+    <button id="close_button" class="close_button">𝕏</button>
+  </header>
 
-  </tab-group>
 
   <script src="../../node_modules/electron-tabs/dist/electron-tabs.js"></script>
-
-  
   <script>
     const tabGroup = document.querySelector("tab-group");
   
@@ -76,10 +101,7 @@
     tabGroup.getTabByPosition(0).activate();
 
   </script>
-
-
-
-    
+  <script src="../assets/js/renderer.js"></script>
     
 </body>
 </html>
