@@ -1,0 +1,19 @@
+{
+  "name": "amethyst",
+  "version": "1.0.0",
+  "description": "Copy cat of Obsidian",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.0.0"
+  },
+  "dependencies": {
+    "chrome-tabs": "^5.4.0",
+    "electron-tabs": "^1.0.2"
+  }
+}
