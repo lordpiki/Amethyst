@@ -1,10 +1,10 @@
-const { app } = require("electron");
+const ipc = require('electron').ipcRenderer
 
-console.log("here");
-const quitAppButton = document.getElementById('close_button');
-console.log(quitAppButton);
+// close app
+function closeApp(e) {
+    console.log("here")
+  e.preventDefault()
+  ipc.send('close')
+}
 
-quitAppButton.addEventListener('click', () => {
-  const { app } = remote;
-  app.quit();
-});
+document.getElementById("close_button").addEventListener("click", closeApp);

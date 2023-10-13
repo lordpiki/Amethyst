@@ -1,24 +1,30 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
+let mainWindow;
 
 
 function createWindow () {
-  const win = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1200,
     height: 900,
     autoHideMenuBar: true,
     webPreferences: {
+      webSecurity:true,
       nodeIntegration: true,
       contextIsolation: false,
       preload: path.join(__dirname, 'preload.js'),
-      enableRemoteModule: true,
     }
   })
 
-  win.loadFile('src/html/base.html');
+  
+  ipc.on('close', () => {
+    app.quit();
+  })
+  mainWindow.loadFile('src/html/base.html');
 
 }
+
 
 app.whenReady().then(() => {
   createWindow()
