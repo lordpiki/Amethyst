@@ -10,17 +10,14 @@ function createWindow () {
     height: 900,
     autoHideMenuBar: true,
     webPreferences: {
-      webSecurity:true,
+      webSecurity: true, // Enable web security
       nodeIntegration: true,
       contextIsolation: false,
+      webviewTag: true,
       preload: path.join(__dirname, 'preload.js'),
     }
   })
 
-  
-  ipc.on('close', () => {
-    app.quit();
-  })
   mainWindow.loadFile('src/html/base.html');
 
 }

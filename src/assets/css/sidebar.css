@@ -21,9 +21,9 @@
 }
 
 .filler {
-  height: calc(var(--height) - 30px); /* Subtract 30px from the container's height */
+  height: calc(var(--height) - 30px);
   width: 100%;
-  flex-grow: 0;
+  flex-grow: 1;
   box-sizing: border-box;
   border: 1px solid #303030;
 }
