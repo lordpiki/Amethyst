@@ -6,7 +6,6 @@
 
 
     <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/tabs.css">
     <link rel="stylesheet" href="../assets/css/sidebar.css">
 
     
@@ -24,6 +23,7 @@
       <header>
         <button class="sidebar_icon" id="toggleSidebar">&#9776;</button>
       </header>
+      
       
     </div>
     <div class="retractable-sidebar">
@@ -45,25 +45,54 @@
               --tabgroup-background: rgba(54, 54, 54, 1);
               --tab-border-color: transparent;
               color: rgb(200, 200, 200, 1);
+              width: 100%;
       
             }
+            
           
             .amethyst-tab {
               color: rgb(200, 200, 200, 1);
-              width: 25vw;
-              max-width: 200px;
+              --tab-background: rgba(54, 54, 54, 1);
+              background: rgba(54, 54, 54, 1);
+
+              width: 0vw;
+              white-space: nowrap;
+              border: 0;
+
               background-color: rgba(54 ,54 ,54, 0.5);
+
+              border-left: none;
+              border-right: none;
+
       
               border-top-right-radius: 7px;
               border-top-left-radius: 7px;
               border-bottom-left-radius: 7px;
               border-bottom-right-radius: 7px;
 
-              
               padding: 0 0 0 0;
-              height: 25px;
-              margin-top: 5px;
+              padding-left: 0px;
+	            padding-right: 0px;
+
+              transition: width ease 0.2s;
             }
+
+            .amethyst-tab.end {
+              content: "dwda";
+              width: 25vw;
+              padding-left: 0px;
+	            padding-right: 0px;
+              margin: 0;
+              max-width: 200px;
+              border: 0;
+
+            }
+
+            .amethyst-tab.visible:not(.active)+.amethyst-tab.visible:not(.active) {
+              border-left: 0px solid var(--tab-border-color);
+              padding-left: 0px;
+            }
+
       
             .amethyst-tab:hover {
               --tab-hover-background: rgba(69,69,69,255);
@@ -71,17 +100,24 @@
       
             .amethyst-tab.active {
               color: rgb(200, 200, 200, 1);
-              border-left: none;
-              border-right: none;
+
+              border: 0;
               background-color: rgba(30, 30, 30, 1);
               border-bottom-left-radius: 0px;
               border-bottom-right-radius: 0px;
-
             }
 
             .nav {
-              height: 20px;
+              height: 40px;
             }
+
+            .new-tab.start {
+              width: 0px;
+              transition: all ease 0.1s;
+            }
+
+            
+
     
             
           </style>
@@ -96,27 +132,9 @@
 
 
   <script src="../../node_modules/electron-tabs/dist/electron-tabs.js"></script>
+  <script src="../assets/js/tabs.js"></script>
   <script>
-    const tabGroup = document.querySelector("tab-group");
-  
-    tabGroup.setDefaultTab({
-      title: "New tab",
-      src: "hello2.txt",
-      ready: function(tab) {
-        tab.element.classList.add("amethyst-tab");
-      }
-    })
-
-      
-    tabGroup.addTab({
-      title: "First tab",
-      src: "hello.txt",
-      ready: function(tab) {
-        tab.element.classList.add("amethyst-tab");
-      }
-    });
-
-    tabGroup.getTabByPosition(0).activate();
+    
 
   </script>
   <script src="../assets/js/renderer.js"></script>

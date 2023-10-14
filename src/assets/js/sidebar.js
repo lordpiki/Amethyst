@@ -6,7 +6,7 @@ document.getElementById("toggleSidebar").addEventListener("click", function () {
     const filler = document.querySelector(".filler");
 
 
-    if (retractableSidebar.style.width === "210px") {
+    if (retractableSidebar.style.width === "200px") {
         
         retractableSidebar.style.width = "1px";
         filler.style.borderWidth = "0 1px 0 1px";
@@ -16,7 +16,7 @@ document.getElementById("toggleSidebar").addEventListener("click", function () {
             fixedSidebar.style.backgroundColor = "transparent";
           }, 100);
     } else {
-        retractableSidebar.style.width = "210px";
+        retractableSidebar.style.width = "200px";
         fixedSidebar.style.backgroundColor = "#262626";
         filler.style.borderColor = "#303030";
         filler.style.borderStyle = "solid";

@@ -12,9 +12,8 @@ header {
   justify-content: space-between;
   background-color: rgba(54, 54, 54, 1);
   color: white;
-  height: 30px;
-  min-height: 30px;
-  max-height: 30px;
+  min-height: 40px;
+  max-height: 40px;
   padding-left: 3px;
   width: 100%;
 }

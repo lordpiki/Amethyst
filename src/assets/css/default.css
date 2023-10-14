@@ -1,0 +1,38 @@
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    color: #dadadaef;
+    font-size: 24px;
+    margin-bottom: 45px;
+    cursor: default;
+  }
+  
+  .links {
+    color:  rgb(163, 129, 255); /* Purple color */
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .links p {
+    margin: 20px;
+    cursor: default;
+  }
+  
+  .links p:hover {
+    color: #9e93bd; /* Maintain the purple color on hover */
+  }
+  

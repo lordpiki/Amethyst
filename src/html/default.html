@@ -1,36 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/default.css">
-
-  <title>No File Open</title>
+  <title>No file is open - Obsidian-like Page</title>
 </head>
 <body>
-
-  <webview class="view visible" src="./hello2.txt"></webview>
-
-  <h1>No file is open.</h1>
-  <ul>
-    <li>Create new file (Ctrl + N)</li>
-    <li>Go to file (Ctrl + 0)</li>
-    <li>See recent files (Ctrl + O)</li>
-    <li>Close</li>
-  </ul>
-
-  <tab-group new-tab-button="true" sortable="true"> </tab-group>
-
-
-  <script src="../../node_modules/electron-tabs/dist/electron-tabs.js"></script>
-  <script>
-    const tabGroup = document.querySelector("tab-group");
-  
-    tabGroup.setDefaultTab({
-      title: "New tabb",
-      src: "https://www.npmjs.com/package/electron-tabs",
-      active: true,
-    })
-
-  </script>
-
+  <div class="container">
+    <h1 class="title">No file is open</h1>
+    <div class="links">
+      <p>Create new file (Ctrl + N)</p>
+      <p>Go to file (Ctrl + O)</p>
+      <p>See recent files (Ctrl + O)</p>
+      <p>Close</p>
+    </div>
+  </div>
 </body>
 </html>
