@@ -19,8 +19,8 @@
   
   
   <div class="container">
-    <div class="fixed-sidebar">
-      <header id="toggleSidebar" >
+    <div class="fixed-sidebar"> 
+      <header id="toggleSidebar" class="corner-icon-container">
         <div class="icon-hover">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left-open"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M9 3v18"/><path d="m14 9 3 3-3 3"/></svg>
         </div>
@@ -51,10 +51,26 @@
               --tab-border-color: transparent;
               color: rgb(200, 200, 200, 1);
               width: 100%;
-      
+              
+            }
+
+            .tab-close button {
+              border-radius: 5px;
+              color: #9d9d9d;
+              cursor: default;
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              left: 90%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            .tab-close button:hover {
+              color: white;
+              background: #2f2f2f;
             }
             
-          
             .amethyst-tab {
               color: rgb(200, 200, 200, 1);
               --tab-background: rgba(54, 54, 54, 1);
@@ -90,6 +106,7 @@
               margin: 0;
               max-width: 200px;
               border: 0;
+              cursor: default;
 
             }
 
@@ -114,6 +131,8 @@
 
             .nav {
               height: 40px;
+              padding-left: 5px;
+              border: 0px;
             }
 
             .new-tab.start {

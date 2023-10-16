@@ -20,12 +20,18 @@
   transition: all ease 0.1s;
 }
 
+.corner-icon-container {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
 .retractable-sidebar {
   width: 1px;
   background-color: #262626;
   color: #fff;
   
-  transition: width ease 1.15s;
+  transition: width ease 0.15s;
 }
 
 .filler {
