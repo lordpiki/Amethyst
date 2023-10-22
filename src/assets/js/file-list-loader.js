@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
+
 function scanFolder(folderPath) {
   try {
-    const files = fs.readdirSync(folderPath);
     const fileData = [];
+    const files = fs.readdirSync(folderPath);
 
     files.forEach((file) => {
       const filePath = path.join(folderPath, file);
@@ -14,10 +15,10 @@ function scanFolder(folderPath) {
         name: file,
         isDirectory: stats.isDirectory(),
         size: stats.size,
+        path: filePath,
         // Add more properties as needed
       });
     });
-    console.log(fileData);
     return fileData;
   } catch (error) {
     console.error(`Error scanning folder: ${error.message}`);
@@ -46,3 +47,5 @@ const folderPath = 'Vault'; // Replace with the actual folder path
 const fileData = scanFolder(folderPath);
 
 renderFileList(fileData);
+
+export { fileData };

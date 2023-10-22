@@ -1,0 +1,36 @@
+/* Style the file list container */
+#file-list-container {
+  width: 0px; /* Set the desired width for your sidebar */
+  color: #fff; /* Text color */
+  padding: 10px;
+  transition: all ease 0.2s;
+}
+
+/* Style the list items (files and directories) */
+#file-list {
+  list-style: none;
+  padding: 0;
+}
+
+#file-list li {
+  margin: 0;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide text that overflows */
+  user-select: none;
+
+}
+
+/* Style for directory items */
+#file-list .directory {
+  font-weight: bold;
+  user-select: none;
+
+}
+
+/* Highlight on hover */
+#file-list li:hover {
+  background-color: #555;
+}

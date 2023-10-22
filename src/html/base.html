@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/file-list.css">
 
     
     
@@ -65,10 +66,10 @@
 
       </header>
 
-      <ul class="file-list" id="file-list">
-        <!-- Files will be added here dynamically -->
-      <li class="directory">testFolder</li><li>text.md</li></ul>
-
+      <div id="file-list-container">
+        <ul id="file-list"></ul>
+      </div>
+      
 
       
       <div class="filler">
@@ -205,7 +206,8 @@
   </script>
   <script src="../assets/js/renderer.js"></script>
   <script src="../assets/js/sidebar.js"></script>
-  <script src="../assets/js/file-loader.js"></script>
+  <script type="module" src="../assets/js/file-list-loader.js"></script>
+  <script type="module" src="../assets/js/file-list-handler.js"></script>
     
           
 

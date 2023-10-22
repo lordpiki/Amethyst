@@ -17,7 +17,6 @@
   background-color: transparent;
   color: #fff;
   transition: all ease 0.1s;
-  z-index: 2;
 }
 
 .corner-icon-container {
@@ -51,7 +50,7 @@
   color: #fff;
   
   transition: width ease 0.15s;
-  z-index: 1;
+
 }
 
 .retractable-sidebar-icons-conainter {
@@ -109,4 +108,3 @@
   color: white;
   background-color: rgba(54, 54, 54, 1); /* Change the background color on hover */
 }
-
