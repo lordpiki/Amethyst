@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "chrome-tabs": "^5.4.0",
-    "electron-tabs": "^1.0.2"
+    "electron-tabs": "^1.0.2",
+    "fs": "^0.0.1-security"
   }
 }

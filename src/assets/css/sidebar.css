@@ -12,18 +12,37 @@
   transition: margin-left 0.3s;
 }
 
-
 .fixed-sidebar {
   width: 40px;
   background-color: transparent;
   color: #fff;
   transition: all ease 0.1s;
+  z-index: 2;
 }
 
 .corner-icon-container {
   display: flex;
   align-items: center;
   padding-left: 5px;
+  color: #c7c7c7;
+}
+
+.fixed-sidebar-icon {
+  width: 19px;
+  height: 19px;
+  color: #c7c7c7
+} 
+
+
+.fixed-sidebar-icons-conainter {
+  display: flex;
+  padding-top: 1px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #c7c7c7;
+  
+  
 }
 
 .retractable-sidebar {
@@ -32,16 +51,28 @@
   color: #fff;
   
   transition: width ease 0.15s;
+  z-index: 1;
+}
+
+.retractable-sidebar-icons-conainter {
+  display: flex;
+  gap: 7px;
+  padding-left: 10px;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+  color: #c7c7c7;
+
 }
 
 .filler {
   height: calc(var(--height) - 40px);
   width: 100%;
   flex-grow: 1;
+  background-color: transparent;
   box-sizing: border-box;
   border: 0 1px 0 1px solid #303030;
 }
-
 
 
 .icon-hover {
@@ -57,5 +88,25 @@
 
 .icon-hover:hover {
   border-radius: 5px;
+  color: white;
   background-color: rgba(69, 69, 69, 1); /* Change the background color on hover */
 }
+
+.icon-hover-sidebar {
+  width: 30px;
+  margin-top: 7px;
+  min-width: 30px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: all 0.1s;
+}
+
+.icon-hover-sidebar:hover {
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(54, 54, 54, 1); /* Change the background color on hover */
+}
+
