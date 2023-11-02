@@ -29,3 +29,7 @@ header {
 .close_button:hover {
   background-color: rgba(255, 0, 0, 0.523);
 }
+
+.lucide-icon {
+  color: #c7c7c7;
+}

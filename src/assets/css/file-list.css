@@ -3,7 +3,8 @@
   width: 0px; /* Set the desired width for your sidebar */
   color: #fff; /* Text color */
   padding: 10px;
-  transition: all ease 0.2s;
+  transition: all ease 0.1s;
+
 }
 
 /* Style the list items (files and directories) */

@@ -1,18 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+  <!-- <link href="src\assets\prism\prism.css" rel="stylesheet" /> -->
+
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
+  <link rel="stylesheet" href="../assets/css/page.css">
   <title>Customize Page</title>
 </head>
+
 <body>
-  <div class="container">
-    <h1 id="customTitle">Your Title</h1>
-    <div contenteditable="true" id="customText" class="custom-text">
-      Your text goes here...
+  <div class="header">
+    <div class="arrows">
+      <div class="icon-hover">
+        <i data-lucide="arrow-left" class="lucide-icon"></i>
+      </div>
+      <div class="icon-hover">
+        <i data-lucide="arrow-right" class="lucide-icon"></i>
+      </div>
+    </div>
+    <div class="nav-title">
+      nav (Ignore for now)
+    </div>
+    <div class="options">
+      <div class="icon-hover">
+        <i data-lucide="book-open" class="lucide-icon"></i>
+      </div>
+      <div class="icon-hover">
+        <i data-lucide="more-vertical" class="lucide-icon"></i>
+      </div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <div class="page">
+
+    <div contenteditable="true" class="title">
+      How to time travel properly
+    </div>
+
+    <div class="content" contenteditable="true" id="content">
+      Write your content here, like _italic_, [[link]], and **bold** text.
+    </div>
+
+    <!-- <script src="src\assets\prism\prism.js"></script> -->
+
+    <script src="../assets/js/page.js" type="text/javascript"></script>
+    <script src="../assets/js/test-remark.js" type="module"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+
+
+
+  </div>
 </body>
+
 </html>

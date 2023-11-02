@@ -11,11 +11,19 @@ function scanFolder(folderPath) {
       const filePath = path.join(folderPath, file);
       const stats = fs.statSync(filePath);
 
+      if (!stats.isDirectory())
+      {
+        if (!file.endsWith(".md"))
+        {
+          return;
+        }
+        file = file.slice(0, -3);
+      }
       fileData.push({
         name: file,
         isDirectory: stats.isDirectory(),
         size: stats.size,
-        path: filePath,
+        path: filePath
         // Add more properties as needed
       });
     });

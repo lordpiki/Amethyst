@@ -6,15 +6,11 @@ tabGroup.setDefaultTab({
     active: true,
     ready: function(tab) {
         tab.element.classList.add("amethyst-tab");
-        tab.on("closing", (tab, abort) => { 
-            console.log("here");
-            tab.element.classList.toggle('end');
-        });
     }
 })
 
     
-addTabFunc()
+addDefaultTabFunc()
 tabGroup.getTabByPosition(0).element.classList.toggle('end');
 
 
@@ -22,9 +18,12 @@ tabGroup.on("tab-added", (tab, tabGroup) => {
     tab.element.classList.toggle('end');
     });
 
+tabGroup.on("tab-active", (tab, tabGroup) => { 
+    //console.log(tab.file_path);
+    localStorage.setItem("active-file", tab.file_path);
+ });
 
-function addTabFunc() {
-
+function addDefaultTabFunc() {
     tabGroup.addTab({
         title: "New tab",
         src: "default.html",
@@ -33,6 +32,16 @@ function addTabFunc() {
           tab.element.classList.add("amethyst-tab");
         }
     });
-
-    
 }
+
+export function addNewPage(file) {
+    tabGroup.addTab({
+      title: file.name,
+      src: `page.html?file_path=${file.path}`,
+      active: true,
+      ready: function(tab) {
+        tab.element.classList.add("amethyst-tab");
+      }
+    });
+  }
+  

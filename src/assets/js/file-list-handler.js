@@ -1,4 +1,4 @@
-// main.js
+import { addNewPage } from "./tabs.js";
 
 import { fileData } from './file-list-loader.js';
 
@@ -11,23 +11,19 @@ fileList.addEventListener('click', (event) => {
   const fileName = listItem.textContent;
 
   const file = fileData.find((item) => item.name === fileName);
-    console.log(file);
+  console.log(file);
   if (file) {
-    if (isFile(file)) {
-      openFile(file.path);
+    if (!file.isDirectory) {
+      openFile(file);
     } else {
       navigateToFolder(file.path);
     }
   }
 });
 
-function isFile(file) {
-  // Implement logic to check if the file is a file (e.g., using path extension)
-  return file.path.endsWith('.md');
-}
-
-function openFile(filePath) {
-    console.log("Opening", filePath);
+function openFile(file) {
+    console.log("Opening", file.name);
+    addNewPage(file)
     // Implement logic to open/load the selected file
 }
 

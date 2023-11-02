@@ -12,15 +12,16 @@ function createWindow () {
     webPreferences: {
       webSecurity: true, // Enable web security
       nodeIntegration: true,
+      enableRemoteModule: true, // Enable the remote module
       contextIsolation: false,
       webviewTag: true,
       preload: path.join(__dirname, 'preload.js'),
     }
   })
 
-  mainWindow.loadFile('src/html/base.html');
+  mainWindow.loadFile('src/html/page.html');
 
-}
+} 
 
 
 app.whenReady().then(() => {

@@ -9,6 +9,7 @@ document.getElementById("toggleSidebar").addEventListener("click", function () {
     filler.style.borderStyle = "solid";
     filler.style.borderWidth = "0 1px 0 1px";
     
+    
 
     
     

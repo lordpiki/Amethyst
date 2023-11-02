@@ -1,0 +1,84 @@
+body {
+    font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+    background-color: rgba(30, 30, 30, 1);
+    color: rgba(218, 218, 218, 1);
+
+}
+
+.page {
+    user-select: none;
+    margin: 0 auto;
+    padding-left: 30px;
+    max-width: 680px;
+}
+
+.title {
+    outline: none;
+    user-select: none;
+    margin-bottom: 7px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.content {
+    outline: none;
+    line-height: 1.5;
+    white-space: pre-line;
+    font-size: 16px;
+    padding-right: 50px;
+}
+
+
+.header {
+    user-select: none;
+    display: flex;
+    padding: 15px;
+    padding-top: 10px;
+    border-top-left-radius: 5px;
+    font-size: 15px;
+    justify-content: space-between;
+}
+
+
+.arrows {
+    display: flex;
+}
+
+.nav-title {
+
+    color: #c7c6c4;
+    font-size: 13px;
+}
+
+.options {
+    display: flex;
+}
+
+.lucide-icon {
+    width: 15px;
+    height: 15px;
+    color: #848484;
+}
+
+.icon-hover {
+    color: #848484;
+    width: 28px;
+    min-width: 28px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: all 0.1s;
+}
+
+.icon-hover:hover {
+    border-radius: 5px;
+    color: #ffffff94;
+    background-color: rgba(47, 47, 47, 1);
+    /* Change the background color on hover */
+}
+
+
