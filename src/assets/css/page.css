@@ -7,11 +7,18 @@ body {
 
 }
 
+h1 {
+    /* font-size: 24px; */
+    color: #ffffff;
+    text-decoration: none;
+  }
+
 .page {
     user-select: none;
     margin: 0 auto;
     padding-left: 30px;
     max-width: 680px;
+    color: white;
 }
 
 .title {
@@ -20,6 +27,7 @@ body {
     margin-bottom: 7px;
     font-size: 30px;
     font-weight: 700;
+    color: #dadada
 }
 
 .content {
@@ -82,3 +90,8 @@ body {
 }
 
 
+/*MD Changes*/
+a:-webkit-any-link {
+    text-decoration: none;
+    color: #dadada
+}

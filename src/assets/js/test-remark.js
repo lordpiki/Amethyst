@@ -1,19 +1,6 @@
-import rehypeFormat from 'rehype-format'
-import rehypeDocument from 'rehype-document'
-import rehypeStringify from 'rehype-stringify'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import {read} from 'to-vfile'
-import {unified} from 'unified'
-import {reporter} from 'vfile-reporter'
+var TurndownService = require('turndown')
 
-const file = await unified()
-  .use(remarkParse)
-  .use(remarkRehype)
-  .use(rehypeDocument)
-  .use(rehypeFormat)
-  .use(rehypeStringify)
-  .process(await read('example.md'))
+var turndownService = new TurndownService()
+var markdown = turndownService.turndown('<h1>Hello world!</h1>')
 
-console.error(reporter(file))
-console.log(String(file))
+console.log(markdown);

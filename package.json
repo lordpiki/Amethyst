@@ -16,6 +16,8 @@
     "chrome-tabs": "^5.4.0",
     "electron-tabs": "^1.0.2",
     "fs": "^0.0.1-security",
+    "html-to-md": "^0.8.3",
+    "hubdown": "^3.0.0",
     "lucide": "^0.288.0",
     "markdown-it": "^13.0.2",
     "marked": "^9.1.2",
@@ -24,8 +26,12 @@
     "rehype-document": "^7.0.2",
     "rehype-format": "^5.0.0",
     "rehype-stringify": "^10.0.0",
+    "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.0.0"
+    "remark-rehype": "^11.0.0",
+    "to-markdown": "^3.1.1",
+    "turndown": "^7.1.2",
+    "unified": "^11.0.4"
   }
 }
